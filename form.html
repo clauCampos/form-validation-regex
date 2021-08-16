@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Regex Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="formRegex">
+            <div class="form__gradient--border">
+                <div class="form__wrapper">
+                    <h1>Form Regex Validation</h1>
+                    <form action="" method="post">
+                        <label for="fname">Nombre:</label>
+                        <input type="text" id="fname" name="fname" placeholder="Nombre(s)"
+                               required data-msg="Enter your custom message here" />
+
+                        <label for="lname">Apellido:</label>
+                        <input type="text" id="lname" name="lname" placeholder="Apellido(s)"
+                               required />
+
+                        <label for="dni">DNI:</label>
+                        <input type="text" id="dni" name="dni" placeholder="12345678X"
+                               pattern="^[0-9]{8}[T|R|W|A|G|M|Y|F|P|D|X|B|N|J|Z|S|Q|V|H|L|C|K|E]$"
+                               required />
+
+                        <label for="phone">Teléfono:</label>
+                        <input type="text" id="phone" name="phone" placeholder="(+34) 123456789"
+                               pattern="(\+34|0034)?[ -]*(6|7|8|9)[ -]*([0-9][ -]*){8}"
+                               required />
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com"
+                               pattern="^([\\w-]+\\.)*?[\\w-]+@[\\w-]+\\.([\\w-]+\\.)*?[\\w]+$"
+                               required />
+
+                        <label for="address">Dirección:</label>
+                        <input type="text" id="address" name="address" placeholder="Dirección"
+                               required />
+
+                        <div class="terms">
+                            <label class="terms__label">
+                                <input class="terms__checkbox" type="checkbox" name="terminos" id="terminos">
+                                Acepto los <a href="#" class="terms__link">Términos y Condiciones</a>
+                            </label>
+                        </div>
+
+                        <input class="btn-submit" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+
